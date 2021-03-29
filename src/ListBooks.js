@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 
 class ListBooks extends Component {
@@ -12,7 +13,9 @@ class ListBooks extends Component {
           {/*<BookShelves />*/}
         </div>
         <div className="open-search">
-          <button>Add a book</button>
+          <Link to="/search">
+            <button>Add a book</button>
+          </Link>
         </div>
       </div>
     )

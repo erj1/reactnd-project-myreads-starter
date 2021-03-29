@@ -155,6 +155,10 @@ button:active {
   color: #999;
 }
 
+.book-authors .author {
+  display: block;
+}
+
 .book-top {
   position: relative;
   height: 200px;
