@@ -22,9 +22,10 @@ class SearchBooks extends Component {
     if (this.state.search_term) {
       search(this.state.search_term)
         .then((books) => {
-          'error' in books
-            ? this.setState({books: []})
-            : this.setState({books})
+          if ('error' in books) {
+            books = [];
+          }
+          this.setState({books})
         })
     } else {
       this.setState({books: []})
@@ -32,6 +33,8 @@ class SearchBooks extends Component {
   }
 
   render() {
+    const {booksOnShelf, onShelfChange} = this.props;
+    const {books, search_term} = this.state;
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -42,11 +45,15 @@ class SearchBooks extends Component {
             <input
               type="text"
               placeholder="Search by title or author"
-              value={this.state.search_term}
+              value={search_term}
               onChange={this.handleSearchInput}/>
           </div>
         </div>
-        <SearchBookResults books={this.state.books} search_term={this.state.search_term}/>
+        <SearchBookResults
+          booksOnShelf={booksOnShelf}
+          books={books}
+          onShelfChange={onShelfChange}
+          search_term={search_term}/>
       </div>
     );
   }
