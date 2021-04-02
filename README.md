@@ -16,6 +16,25 @@ $ yarn install
 $ yarn start
 ```
 
+## Testing
+
+### Installation (Mac OS)
+
+Before tests can be run, you will need to install `watchman`:
+
+```
+$ brew install watchman
+```
+
+### Running Tests
+
+To run tests, you should only need to run 
+
+```
+$ yarn test
+```
+
+
 ## Important
 
 When searching for books, this project limits the search terms that can be used.  The list of available search terms

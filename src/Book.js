@@ -51,7 +51,7 @@ class Book extends Component {
             </select>
           </div>
         </div>
-        <div className="book title">{book.title}</div>
+        <div className="book-title">{book.title}</div>
         <div className="book-authors">
           {book.authors && book.authors.map(author => (
             <span key={author} className="author">{author}</span>
