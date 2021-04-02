@@ -12,8 +12,8 @@ To install the project, you must run the following commands:
 ```
 $ git clone https://github.com/erj1/reactnd-project-myreads-starter.git
 $ cd reactnd-project-myreads-starter
-$ npm install
-$ npm start
+$ yarn install
+$ yarn start
 ```
 
 ## Important
